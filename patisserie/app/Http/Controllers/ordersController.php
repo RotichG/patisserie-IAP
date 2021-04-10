@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\Orders;
 
 use Illuminate\Http\Request;
 
-class orderController extends Controller
+class ordersController extends Controller
 {
     function show_orders(){
-        
+        $order=Orders::all();
     }
 }

@@ -66,18 +66,19 @@
 				<hr>
 			</div>
 			<div class="col-md-offset-1 col-md-10 col-sm-12 wow fadeIn" data-wow-delay="0.9s">
-				<form action="addfood.php" method="post" enctype="multipart/form-data">
+				<form action="/food" method="post" enctype="multipart/form-data">
+				@csrf
 					<div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
-						<input name="image" type="file" class="form-control" id="image" placeholder="Image">
+						<input name="image" required name="image" type="file" class="form-control" id="image" placeholder="Image">
 				    </div><br><br>
 					<div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
-						<input name="foodname" type="foodname" class="form-control" id="name" placeholder="Name">
+						<input name="foodname" type="text" required name="foodname" class="form-control" id="name" placeholder="Name">
 				    </div><br><br>
 					<div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
-						<textarea name="description" rows="6" class="form-control" id="description" placeholder="Description"></textarea>
+						<textarea name="description" rows="6" required name="description" class="form-control" id="description" placeholder="Description"></textarea>
                     </div><br><br>
                     <div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
-						<input name="price" type="price" class="form-control" id="price" placeholder="Price">
+						<input name="price" type="price" required name="price" class="form-control" id="price" placeholder="Price">
 				    </div><br><br>
 					<div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
 						<input name="add" type="submit" class="form-control" id="submit" value="Add">

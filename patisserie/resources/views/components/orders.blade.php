@@ -81,29 +81,18 @@ $conn = new mysqli("127.0.0.1", "root", "", "mywebsite", "3307");
                     <th>Status</th>
                 </tr>
 
-                <?php
-                $sql = "SELECT * FROM orders";
-                $result = mysqli_query($conn,$sql);
-                $resultCheck = mysqli_num_rows($result);
-
-                if ($resultCheck > 0){
-                    while ($row = mysqli_fetch_assoc($result)){
-                    
-                        ?>
+                
 
                         <tr>
-                            <td><?php echo $row['orderNo']; ?></td>
-                            <td><?php echo $row['date']; ?></td>
-                            <td><?php echo $row['customer']; ?></td>
-                            <td><?php echo $row['deliveryAddress']; ?></td>
-                            <td><?php echo $row['total']; ?></td>
-                            <td><?php echo $row['status']; ?></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                 
-                <?php        
-                    }
-                }
-                ?>
+                
                 
 			</div>
 		</div>
